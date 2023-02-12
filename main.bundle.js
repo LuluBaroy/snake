@@ -749,7 +749,7 @@ window.onload = function () {
   };
   getDeviceType();
 };
-pad.addEventListener('touchstart', function (event) {
+pad.addEventListener('click', function (event) {
   switch (event.target.id) {
     case 'up':
       {
@@ -793,6 +793,42 @@ pad.addEventListener('touchstart', function (event) {
       }
   }
 });
+/*pad.addEventListener('touchstart', (event) => {
+    switch (event.target.id){
+        case 'up':{
+            direction = 'n'
+            break
+        }
+        case 'upIcon': {
+            direction = 'n'
+            break
+        }
+        case 'down':{
+            direction = 's'
+            break
+        }
+        case 'downIcon':{
+            direction = 's'
+            break
+        }
+        case 'right':{
+            direction = 'e'
+            break
+        }
+        case 'rightIcon':{
+            direction = 'e'
+            break
+        }
+        case 'left':{
+            direction = 'o'
+            break
+        }
+        case 'leftIcon':{
+            direction = 'o'
+            break
+        }
+    }
+})*/
 var drawMap = function drawMap() {
   ctx.fillStyle = 'black';
   ctx.fillRect(0, 0, 800, 800);
